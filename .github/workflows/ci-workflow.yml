@@ -19,7 +19,7 @@ jobs:
                python-version: '3.x'
 
            - name: run python script
-             uses: python app.py
+             run: python app.py
 
            - name: print message
              uses: echo "Workflow executed success fully"
