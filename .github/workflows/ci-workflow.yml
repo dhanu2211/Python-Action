@@ -6,20 +6,15 @@ on:
       - main
 
 jobs:
-    run_ci:
-        runs-on: ubuntu-22.04
+  run_ci:
+    runs-on: ubuntu-22.04
 
-        steps:
-           - name: Checkout Repository
-             uses: actions/checkout@v4
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-           - name: Set up Python
-             uses: actions/setup-python@v4
-             with:
-               python-version: '3.x'
+      - name: Run Python Script
+        run: python app.py
 
-           - name: run python script
-             run: python app.py
-
-           - name: print message
-             uses: echo "Workflow executed success fully"
+      - name: Print Message
+        run: echo "Workflow executed successfully"
